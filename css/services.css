@@ -1,0 +1,94 @@
+/* Fix for the Navbar Notice spacing */
+body {
+    margin-top: 70px; /* Adjust based on your navbar height */
+}
+
+.shop-section {
+    background-color: #f8fafc;
+    
+}
+
+/* THE CARD FIX */
+.product-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.1) !important;
+    border-color: #007bff;
+}
+
+/* THE IMAGE FIX - Crucial for image_875925.jpg issues */
+.product-img-wrapper {
+    width: 100%;
+    height: 220px; /* Fixed height for all containers */
+    background: #f1f5f9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-img-wrapper img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* Prevents stretching or overlapping */
+}
+
+/* TEXT STYLING */
+.product-info {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #3b82f6;
+    letter-spacing: 1px;
+}
+
+.name {
+    font-size: 16px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #2563eb;
+}
+
+.title-divider {
+    width: 50px;
+    height: 3px;
+    background: #2563eb;
+    margin-top: 10px;
+    border-radius: 2px;
+}
+    .btn-aquil-primary { background: #0a3d62; color: white !important; border-radius: 12px; font-weight: 700; transition: 0.3s; padding: 12px; border: none; text-align: center; display: block; width: 100%; }
+.filter-btn { border-radius: 20px; transition: 0.3s; font-weight: 600; }
+    .filter-btn.active { background-color: #0a3d62; color: white; }
+    .product-card { transition: transform 0.3s, box-shadow 0.3s; border-radius: 15px; overflow: hidden; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+    .section-title { color: #0a3d62; font-weight: 800; }
+    .title-divider { height: 4px; width: 60px; background: #2a7f62; border-radius: 2px; }
+
+   

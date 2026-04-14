@@ -1,0 +1,80 @@
+
+    :root {
+        --primary: #2a7f62;
+        --secondary: #0a3d62;
+        --light-bg: #f8fbfa;
+    }
+    html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* This container should wrap everything between the body tags */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+    .receipt-container {
+        font-family: 'Inter', -apple-system, sans-serif;
+        color: #444;
+        background: white;
+    }
+    .modern-header {
+        background: linear-gradient(135deg, var(--secondary) 0%, #1a5d8a 100%);
+        color: white;
+        padding: 25px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .status-badge {
+        background: rgba(255,255,255,0.2);
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+    .info-card {
+        background: var(--light-bg);
+        border-radius: 10px;
+        padding: 15px;
+        border: 1px solid #eef2f1;
+        height: 100%;
+    }
+    .item-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 8px;
+    }
+    .item-table th {
+        color: #888;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+    .item-row {
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        transition: transform 0.2s;
+    }
+    .item-row td {
+        padding: 15px 10px;
+        border-top: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .item-row td:first-child { border-left: 1px solid #f0f0f0; border-radius: 8px 0 0 8px; }
+    .item-row td:last-child { border-right: 1px solid #f0f0f0; border-radius: 0 8px 8px 0; }
+    
+    .total-section {
+        background: var(--secondary);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+    }

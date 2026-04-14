@@ -1,0 +1,213 @@
+:root { 
+    --aquil-navy: #0a3d62; 
+    --aquil-green: #2a7f62; 
+    --sidebar-width: 260px; 
+}
+body { 
+    background-color: #f4f7f6; 
+    font-family: 'Segoe UI', sans-serif; 
+    /* overflow-x: hidden; */
+}
+
+.sidebar { 
+    width: var(--sidebar-width); 
+    height: 100vh; 
+    background: var(--aquil-navy); 
+    position: fixed; 
+    /* z-index: 1000; 
+    display: flex;
+    flex-direction: column; */
+}
+.sidebar-header { 
+    padding: 25px; 
+    text-align: center; 
+    background: rgba(0,0,0,0.1); 
+    color: white; 
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-links { 
+    flex-grow: 1; margin-top: 20px; 
+}
+.nav-links a { 
+    display: block; 
+    padding: 15px 25px; 
+    color: rgba(255,255,255,0.7) ; 
+    text-decoration: none !important; 
+    border-left: 4px solid transparent; 
+    transition: 0.3s;
+}
+.nav-links i { margin-right: 12px; width: 20px; text-align: center; }
+
+.nav-links a:hover, .nav-links a.active { 
+    color: white; 
+    background: rgba(255,255,255,0.1); 
+    border-left-color: var(--aquil-green);  
+}
+.logout-link {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+}
+.main-content { 
+    margin-left: var(--sidebar-width); 
+    padding: 30px; 
+}
+.top-bar { 
+    background: white; 
+    padding: 15px 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+.product-card { 
+    background: white; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+}
+.table thead { 
+    background: var(--aquil-navy); 
+    color: white; 
+}
+.user-card { 
+    background: white; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+}
+.stat-card { 
+    background: white; 
+    border-radius: 15px; 
+    padding: 25px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    height: 100%; 
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover { transform: translateY(-5px); }
+.icon-box { 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 12px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1.5rem; 
+    margin-bottom: 15px; 
+}
+
+.action-link { 
+    text-decoration: none !important; 
+    font-weight: 600; 
+    display: inline-flex; 
+    align-items: center; 
+    transition: 0.2s;
+}
+.action-link:hover { transform: translateX(5px); }
+
+.quick-actions-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-top: 30px;
+} 
+.inbox-card { 
+    background: white; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+}
+.msg-table thead { 
+    background: var(--navy); 
+    color: white; 
+}
+.badge-subject { 
+    background: var(--green); 
+    color: white; 
+    padding: 4px 10px; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+}
+
+.inbox-card div.small {
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inbox-card tr:hover div.small {
+    white-space: normal;
+}
+.alert-inbox {
+    border: none;
+    border-radius: 12px;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    animation: slideDown 0.4s ease;
+}
+
+.alert-inbox i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.alert-deleted {
+    background-color: #ecfdf5;
+    color: #065f46;
+    border-left: 5px solid #10b981;
+}
+
+.alert-error {
+    background-color: #fef2f2;
+    color: #991b1b;
+    border-left: 5px solid #ef4444;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.btn-group .btn {
+    margin: 0 2px;
+    border-radius: 6px !important;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+
+/* Circular Branding for Action Buttons */
+.btn-outline-success {
+    border-radius: 50%; /* Makes it a circle */
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #25d366;
+    transform: scale(1.1);
+}
+.btn-gmail-blue {
+    color: #1a73e8; /* Google/Gmail Brand Blue */
+    border-color: #1a73e8;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-gmail-blue:hover {
+    background-color: #1a73e8;
+    color: white;
+    box-shadow: 0 2px 5px rgba(26, 115, 232, 0.4);
+}
